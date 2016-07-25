@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/bdx109/BdxProj/W65/W65_WDSU_A_CODE/app/libs/gson-2.2.4.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="973e832af433b44c3ed11c426f2f390b29f3f3f8">
+        <dex dex="/Users/bdx109/BdxProj/W65/W65_WDSU_A_CODE/app/build/intermediates/pre-dexed/debug/gson-2.2.4-4d132c26e14b2ae9e401e4061844cb54b28ae585.jar" />
+    </item>
+    <item
+        jar="/Users/bdx109/BdxProj/W65/W65_WDSU_A_CODE/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/bdx109/BdxProj/W65/W65_WDSU_A_CODE/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-217f239e29e39b4ba59db377946ac2a28e2a9dfe.jar" />
+    </item>
+    <item
+        jar="/Users/bdx109/BdxProj/W65/W65_WDSU_A_CODE/app/libs/gson-2.2.4-sources.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="10ab84ba225b583b10713f57c04270c918ef162b">
+        <dex dex="/Users/bdx109/BdxProj/W65/W65_WDSU_A_CODE/app/build/intermediates/pre-dexed/debug/gson-2.2.4-sources-debf959245e6ca0546e11b2d9c9856025e03d2b2.jar" />
+    </item>
+    <item
+        jar="/Users/bdx109/BdxProj/W65/W65_WDSU_A_CODE/app/libs/AMap_android_API_2DMap_Lib_V2.7.0_20151124.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4165e2d2b127e12033f894513bb85fe4ac66c610">
+        <dex dex="/Users/bdx109/BdxProj/W65/W65_WDSU_A_CODE/app/build/intermediates/pre-dexed/debug/AMap_android_API_2DMap_Lib_V2.7.0_20151124-6a37c058f0590fd282a38c3b4a069b231d887337.jar" />
+    </item>
+    <item
+        jar="/Users/Tools/Android-SDK/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/Users/bdx109/BdxProj/W65/W65_WDSU_A_CODE/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-05d52a6151a16ce9eef30ede0140e4ea38914cad.jar" />
+    </item>
+    <item
+        jar="/Users/bdx109/BdxProj/W65/W65_WDSU_A_CODE/locationtest/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/bdx109/BdxProj/W65/W65_WDSU_A_CODE/locationtest/build/intermediates/pre-dexed/debug/classes-dd25fb19518ac9af1454a8da8a77d64f0cac916a.jar" />
+    </item>
+    <item
+        jar="/Users/bdx109/BdxProj/W65/W65_WDSU_A_CODE/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/Users/bdx109/BdxProj/W65/W65_WDSU_A_CODE/app/build/intermediates/pre-dexed/debug/classes-c8643e49882aeeef8e76e67c4c9f1a6022f10f9e.jar" />
+    </item>
+    <item
+        jar="/Users/bdx109/BdxProj/W65/W65_WDSU_A_CODE/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/bdx109/BdxProj/W65/W65_WDSU_A_CODE/app/build/intermediates/pre-dexed/debug/classes-50bcb8f214b34c447c3ff14a5b5bc46714709976.jar" />
+    </item>
+    <item
+        jar="/Users/bdx109/BdxProj/W65/W65_WDSU_A_CODE/app/libs/AMap_Services_V2.7.0_20151125.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7eac53aff3958c7447c434fe376c8c978a2f9c5c">
+        <dex dex="/Users/bdx109/BdxProj/W65/W65_WDSU_A_CODE/app/build/intermediates/pre-dexed/debug/AMap_Services_V2.7.0_20151125-b97c8856dff88e45e1992111854906d6f4dcc1c8.jar" />
+    </item>
+    <item
+        jar="/Users/bdx109/BdxProj/W65/W65_WDSU_A_CODE/app/libs/AMap_Location_v2.0.0_20151117.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="fbd0189f0d86bbfa558b2c2344ea3f3932a2ad35">
+        <dex dex="/Users/bdx109/BdxProj/W65/W65_WDSU_A_CODE/app/build/intermediates/pre-dexed/debug/AMap_Location_v2.0.0_20151117-fad0977deacf9b1e505af7b46708799cb0dc91fc.jar" />
+    </item>
+    <item
+        jar="/Users/bdx109/BdxProj/W65/W65_WDSU_A_CODE/app/libs/gson-2.2.4-javadoc.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="be47c2ee6e9ab0668874e4c6c4933c0637f473d8">
+        <dex dex="/Users/bdx109/BdxProj/W65/W65_WDSU_A_CODE/app/build/intermediates/pre-dexed/debug/gson-2.2.4-javadoc-99b87dd3fc0b779f6264e39155a5159d4bca4d5f.jar" />
+    </item>
+    <item
+        jar="/Users/bdx109/BdxProj/W65/W65_WDSU_A_CODE/app/libs/litepal-1.3.1-src.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8a2176dcd928b14e9abb68d159a93a0ff73cafff">
+        <dex dex="/Users/bdx109/BdxProj/W65/W65_WDSU_A_CODE/app/build/intermediates/pre-dexed/debug/litepal-1.3.1-src-a1ab1a374d4a03c5da66f11926e1de3b6e9979c2.jar" />
+    </item>
+    <item
+        jar="/Users/bdx109/BdxProj/W65/W65_WDSU_A_CODE/app/libs/BaiduLBS_Android.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7c04a3a45afef70d38b3940d2394b39dc464d24d">
+        <dex dex="/Users/bdx109/BdxProj/W65/W65_WDSU_A_CODE/app/build/intermediates/pre-dexed/debug/BaiduLBS_Android-a10c45b7d2a7e23244966ef944fdce9d7d730508.jar" />
+    </item>
+    <item
+        jar="/Users/bdx109/BdxProj/W65/W65_WDSU_A_CODE/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b8945fc23a7461c6fdde15753456d64b0a9358b">
+        <dex dex="/Users/bdx109/BdxProj/W65/W65_WDSU_A_CODE/app/build/intermediates/pre-dexed/debug/classes-4be19ae61d99929e0dcdffcd76853635d69e86a2.jar" />
+    </item>
+    <item
+        jar="/Users/bdx109/.gradle/caches/modules-2/files-2.1/eu.the4thfloor.volley/com.android.volley/2015.05.28/b0b08cc0ac897e596abe6b263a9507cba875b705/com.android.volley-2015.05.28.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b0b08cc0ac897e596abe6b263a9507cba875b705">
+        <dex dex="/Users/bdx109/BdxProj/W65/W65_WDSU_A_CODE/app/build/intermediates/pre-dexed/debug/com.android.volley-2015.05.28-17fd8ea5f650fdb2303e95fe00ad150bfce5f8ec.jar" />
+    </item>
+    <item
+        jar="/Users/bdx109/BdxProj/W65/W65_WDSU_A_CODE/locationtest/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/Users/bdx109/BdxProj/W65/W65_WDSU_A_CODE/locationtest/build/intermediates/pre-dexed/debug/classes-4014154aecb7cd2328c8368dd3ab965c9c70a957.jar" />
+    </item>
+    <item
+        jar="/Users/bdx109/BdxProj/W65/W65_WDSU_A_CODE/app/build/intermediates/exploded-aar/de.hdodenhof/circleimageview/2.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="031e8b3ab2df4ab43b1017f84417d7e10dfbb8d2">
+        <dex dex="/Users/bdx109/BdxProj/W65/W65_WDSU_A_CODE/app/build/intermediates/pre-dexed/debug/classes-89cdf91494e4f5ff691ec3cd0d1f303aac771330.jar" />
+    </item>
+    <item
+        jar="/Users/bdx109/BdxProj/W65/W65_WDSU_A_CODE/locationtest/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/bdx109/BdxProj/W65/W65_WDSU_A_CODE/locationtest/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-81e61f9679caf025b926bf840ef8e0e1269f0654.jar" />
+    </item>
+
+</items>

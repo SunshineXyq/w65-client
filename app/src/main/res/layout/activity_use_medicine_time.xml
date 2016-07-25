@@ -1,0 +1,99 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:text="用药提醒"
+            />
+        <Button
+            android:id="@+id/confirm_increate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="确定"
+            android:textSize="20sp"
+            android:textColor="@color/blue"
+            android:background="#ffffff"
+            />
+
+        <ImageView
+            android:id="@+id/imageview_title_back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:padding="5dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/_infoback"/>
+
+
+    </RelativeLayout>
+
+    <View style="@style/line_horizontal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#ffffff"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/login_info"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:text="备注:" />
+
+        <EditText
+            android:id="@+id/et_remark"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="#0004FF"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:singleLine="true"
+            android:background="@null" />
+    </LinearLayout>
+
+    <View style="@style/line_horizontal" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            style="@style/login_info"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:text="时间:" />
+
+        <EditText
+            android:id="@+id/et_time"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:textSize="18sp"
+            android:background="@null" />
+    </LinearLayout>
+
+
+</LinearLayout>

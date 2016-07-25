@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/id_swipe_ly"
+        android:layout_width="match_parent"
+        android:layout_height="260dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:orientation="vertical">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <FrameLayout
+                    android:id="@+id/framelayout_chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="13dp"
+                    android:paddingRight="13dp"
+                    android:layout_weight="1">
+                </FrameLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <ImageView
+                        android:id="@+id/image_notification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="13dp"
+                        android:paddingRight="13dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@mipmap/notification"
+                        />
+                </RelativeLayout>
+            </FrameLayout>
+
+            <RadioGroup
+                android:id="@+id/radiogroup_chart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/button_heart_chart"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:background="@drawable/auth_left_radiobutton"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:button="@null"
+                    android:text="@string/firstpager_button_heart"/>
+                <RadioButton
+                    android:id="@+id/button_distance_chart"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:background="@drawable/auth_right_radiobutton"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:button="@null"
+                    android:text="@string/firstpager_button_walk"/>
+            </RadioGroup>
+        </LinearLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+
+
+
+
+    <FrameLayout
+        android:id="@+id/device_message"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1">
+        <include
+            android:id="@+id/device_number"
+            layout="@layout/activity_homepage_device_head"/>
+    </FrameLayout>
+
+    </LinearLayout>
+
+

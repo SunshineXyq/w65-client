@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bluedatax.w65" >
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入缓存定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+
+    <application
+        android:name=".BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity android:name=".activity.ForgetPassword" />
+        <activity android:name=".activity.Login" >
+        </activity>
+        <activity android:name=".activity.StartAnimation" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.TempPassword" />
+        <activity android:name=".activity.HealthInfo" />
+        <activity android:name=".activity.FixPassword" />
+        <activity android:name=".activity.Setting" />
+        <activity android:name=".activity.SetIcon" />
+        <activity android:name=".activity.LeaveMessage" />
+        <activity android:name=".activity.FamilyNumber" />
+        <activity android:name=".activity.UserAuthorization" />
+        <activity android:name=".ActivityTest" />
+        <activity android:name=".activity.LongSideRemind" />
+        <activity android:name=".activity.AccidentReport"/>
+        <activity android:name=".activity.AccidentState" />
+        <activity android:name=".utils.sign.Sign" />
+        <activity android:name=".utils.map.ApplicationMap" />
+        <activity android:name=".activity.FindPassword" />
+        <activity android:name=".utils.map.BdMapApplication" />
+        <activity android:name=".activity.UseMedicineMessage" />
+        <activity
+            android:name=".activity.ImageLarge"
+            android:theme="@style/Transparent" />
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="d0918c698028d7786ebd6c024ed28885" />
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="pheFgSPpNR9aDxgdn9l01IAo" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+
+        <activity
+            android:name=".utils.android_websockets.ConnectActivity"
+            android:label="@string/title_activity_connect" >
+        </activity>
+
+        <service
+            android:name=".Service.MyService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+
+        <activity
+            android:name=".activity.SaveFamilyNumber"
+            android:label="@string/title_activity_save_famiy_number" >
+        </activity>
+        <activity
+            android:name=".activity.MineDeviceDetail"
+            android:label="@string/title_activity_mine_device_detail" >
+        </activity>
+        <activity
+            android:name=".activity.BirthdaySound"
+            android:label="@string/title_activity_birthday_sound" >
+        </activity>
+        <activity
+            android:name=".activity.UseMedicineTime"
+            android:label="@string/title_activity_use_medicine_time" >
+        </activity>
+    </application>
+
+</manifest>

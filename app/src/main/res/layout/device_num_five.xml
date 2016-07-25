@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="30dp"
+
+    >
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/deviceFive2"
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            android:layout_marginLeft="70dp"
+            android:src="@mipmap/ic_launcher"
+            app:civ_border_width="2dp"
+            android:layout_marginTop="30dp"
+            app:civ_border_color="#55ffff"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/device_five_mine"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_toRightOf="@+id/deviceFive2"
+            android:layout_marginTop="101dp"
+            android:src="@mipmap/ic_launcher"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#55ffff"/>
+
+
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/deviceFive3"
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            android:layout_marginTop="40dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_toRightOf="@+id/device_five_mine"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#55ffff"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/deviceFive6"
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:layout_marginLeft="70dp"
+        android:layout_below="@+id/deviceFive2"
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginTop="5dp"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#55ffff"/>
+
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/deviceFive4"
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            android:layout_marginLeft="70dp"
+            android:layout_below="@+id/deviceFive2"
+            android:src="@mipmap/ic_launcher"
+            android:layout_marginTop="70dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#55ffff"/>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/deviceFive5"
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            android:layout_marginTop="70dp"
+            android:src="@mipmap/ic_launcher"
+            app:civ_border_width="2dp"
+            android:layout_below="@+id/deviceFive3"
+           android:layout_toRightOf="@+id/device_five_mine"
+            app:civ_border_color="#55ffff"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/deviceFive7"
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="5dp"
+        android:src="@mipmap/ic_launcher"
+        app:civ_border_width="2dp"
+        android:layout_below="@+id/deviceFive3"
+        android:layout_toRightOf="@+id/device_five_mine"
+        app:civ_border_color="#55ffff"/>
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

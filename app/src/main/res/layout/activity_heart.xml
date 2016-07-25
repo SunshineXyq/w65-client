@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 爱心定制title -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:padding="12dp"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:text="@string/radiobutton_main_love" />
+
+    <View style="@style/line_horizontal" />
+
+    <!-- 爱心定制下的所有列表 -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <!-- 爱心定制下的 久坐提醒 列表 -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+            <TextView
+                android:id="@+id/layout_longseat"
+                style="@style/heart_text"
+                android:text="@string/heart_text_site"
+                />
+
+            <ImageView
+                android:id="@+id/longseat_switch"
+                style="@style/heart_switch"
+                android:contentDescription="@string/app_name"
+                android:layout_toLeftOf="@+id/heart_longside_remind"
+                />
+
+            <!--<com.bluedatax.w65.chart.SlideSwitch-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_toLeftOf="@+id/heart_longside_remind"/>-->
+            <ImageView
+                android:id="@+id/heart_longside_remind"
+                style="@style/heart_more"
+                />
+        </RelativeLayout>
+        <View style="@style/line_horizontal" />
+        <!-- 爱心定制下的 生日提醒 列表 -->
+
+        <RelativeLayout
+            android:id="@+id/layout_birthdayremind"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <TextView
+                style="@style/heart_text"
+                android:text="@string/heart_text_birthday" />
+            <ImageView
+                android:id="@+id/birthday_switch"
+                style="@style/heart_switch"
+                android:layout_toLeftOf="@+id/heart_birthday_remind"
+                />
+            <ImageView
+                android:id="@+id/heart_birthday_remind"
+                style="@style/heart_more"
+                />
+        </RelativeLayout>
+
+        <View style="@style/line_horizontal" />
+        <!-- 爱心定制下的 用药提醒 列表 -->
+
+        <RelativeLayout
+            android:id="@+id/layout_medicineremind"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <TextView
+                style="@style/heart_text"
+                android:text="@string/heart_text_medicine" />
+            <ImageView
+                android:id="@+id/medicine_switch"
+                style="@style/heart_switch"
+                android:layout_toLeftOf="@+id/heart_medicine_remind"
+                />
+            <ImageView
+                android:id="@+id/heart_medicine_remind"
+                style="@style/heart_more"
+                />
+        </RelativeLayout>
+
+        <View style="@style/line_horizontal" />
+        <!-- 爱心定制下的 亲情礼品 列表 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <TextView
+                style="@style/heart_text"
+                android:text="@string/heart_text_gift" />
+
+            <ImageView
+                android:id="@+id/heart_gift_remind"
+                style="@style/heart_more"
+                />
+        </RelativeLayout>
+
+        <View style="@style/line_horizontal" />
+        <!-- 爱心定制下的 音乐推送 列表 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <TextView
+                style="@style/heart_text"
+                android:text="@string/heart_text_music" />
+
+            <ImageView
+                android:id="@+id/heart_music_remind"
+                style="@style/heart_more"
+                />
+        </RelativeLayout>
+
+        <View style="@style/line_horizontal" />
+        <!-- 爱心定制下的 电话留言 列表 -->
+
+        <RelativeLayout
+            android:id="@+id/heart_leave_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <TextView
+                style="@style/heart_text"
+                android:text="@string/heart_text_message" />
+            <ImageView
+
+                style="@style/heart_more"
+                />
+        </RelativeLayout>
+
+        <View style="@style/line_horizontal" />
+
+        <RelativeLayout
+            android:id="@+id/family_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <TextView
+                style="@style/heart_text"
+                android:text="@string/heart_text_family" />
+            <ImageView
+                style="@style/heart_more"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

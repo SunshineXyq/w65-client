@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.bluedatax.w65.chart.TitleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.bluedatax.w65.chart.TitleLayout>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleimage_seticon"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:src="@mipmap/ic_launcher"
+        app:civ_border_width="2dp"
+        android:layout_gravity="center"
+        app:civ_border_color="#55ffff"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/layout_takephoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/seticon_text_takephoto"
+                android:textSize="18dp"/>
+            <ImageView
+                android:id="@+id/imageview_seticon_takephoto_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/title_back"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <View style="@style/line_horizontal"/>
+        <RelativeLayout
+            android:id="@+id/layout_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/seticon_text_photo"
+                android:textSize="18dp"/>
+            <ImageView
+                android:id="@+id/imageview_seticon_photo_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/title_back"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        </LinearLayout>
+</LinearLayout>

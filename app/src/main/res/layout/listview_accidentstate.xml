@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#5555ff">
+<FrameLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <View
+        android:layout_width="3dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:background="#c0c0c0"/>
+    <ImageView
+        android:id="@+id/imageview_list_accident"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/accident_circle"/>
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/textview_list_accidentdata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_gravity="center"
+            android:textColor="#ffffff"
+            android:text="2015年3月12日"/>
+        <TextView
+            android:id="@+id/textview_list_accidentinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textSize="18dp"
+            android:textColor="#ffffff"
+            android:text="医生建议手术（住院治疗）"/>
+        <View style="@style/line_horizontal"/>
+        </LinearLayout>
+    <Button
+        android:id="@+id/button_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:background="@drawable/round_rect_red"
+        android:text="签字"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/title_back"/>
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    
+    <TextView
+        android:id="@+id/textview_leavemessage_stime"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="35dp"
+        android:textColor="@color/blue"
+        android:focusable="false"
+        android:text="nihao"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="right"
+        android:focusable="false"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/textview_leavemessage_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="slkjfk"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@mipmap/record">
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical">
+                <!--<ImageView-->
+                    <!--android:layout_width="50dp"-->
+                    <!--android:layout_height="40dp"-->
+                    <!--android:src="@mipmap/android_person"/>-->
+                <!--<TextView-->
+                    <!--android:id="@+id/textview_leavemessage_name"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="father"-->
+                    <!--android:layout_gravity="center"/>-->
+            </LinearLayout>
+        </LinearLayout>
+        </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.bluedatax.w65.chart.TitleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.bluedatax.w65.chart.TitleLayout>
+    <RadioGroup
+        android:id="@+id/radiogroup_auth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <RadioButton
+            android:id="@+id/radiobutton_auth_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/authorization_text_register"
+            android:background="@drawable/auth_left_radiobutton"
+            android:padding="10dp"
+            android:button="@null"/>
+        <RadioButton
+            android:id="@+id/radiobutton_auth_inquire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/authorization_text_inquire"
+            android:background="@drawable/auth_right_radiobutton"
+            android:padding="10dp"
+            android:button="@null"/>
+        </RadioGroup>
+
+    <View
+        android:layout_marginTop="10dp"
+        style="@style/line_horizontal"/>
+    <FrameLayout
+        android:id="@+id/framelayout_auth"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"></FrameLayout>
+
+</LinearLayout>

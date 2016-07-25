@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.bluedatax.w65.chart.TitleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.bluedatax.w65.chart.TitleLayout>
+
+    <View style="@style/line_horizontal" />
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/lm_image_one"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@mipmap/ic_launcher"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#55ffff"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/lm_image_two"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@mipmap/ic_launcher"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#55ffff"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circleimage3"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@mipmap/ic_launcher"
+                app:civ_border_width="2dp"
+                android:visibility="invisible"
+                app:civ_border_color="#55ffff"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circleimage4"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@mipmap/ic_launcher"
+                app:civ_border_width="2dp"
+                android:visibility="invisible"
+                app:civ_border_color="#55ffff"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circleimage5"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@mipmap/ic_launcher"
+                app:civ_border_width="2dp"
+                android:visibility="invisible"
+                app:civ_border_color="#55ffff"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circleimage6"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@mipmap/ic_launcher"
+                app:civ_border_width="2dp"
+                android:visibility="invisible"
+                app:civ_border_color="#55ffff"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/tv_leavemessage_person"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="母亲（设备 ID 08613100001234）"
+        android:textColor="#fd8a00"
+        android:padding="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/text_phone_message"/>
+    <View style="@style/line_horizontal"/>
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <com.bluedatax.w65.utils.pullRefresh.XListView
+            android:id="@+id/listview_leavemessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:divider="@null">
+        </com.bluedatax.w65.utils.pullRefresh.XListView>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/rl_load"
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:background="@drawable/circle_background"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+
+                    <ProgressBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="@string/loading" />
+                </LinearLayout>
+            </RelativeLayout>
+        </FrameLayout>
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/imageview_mic"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@mipmap/leave_message_mic" />
+
+
+    </LinearLayout>
+</LinearLayout>

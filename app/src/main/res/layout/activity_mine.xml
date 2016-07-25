@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+
+    <TextView 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:text="@string/mine_text_weather"
+        />
+    	<!-- 自定义view或者一张图片 -->
+    <FrameLayout
+        android:id="@+id/device_message_detail"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1">
+        <include
+            android:id="@+id/device_two"
+            layout="@layout/device_num_two"/>
+    </FrameLayout>
+        <!--<View -->
+            <!--android:layout_width="match_parent"-->
+    		<!--android:layout_height="wrap_content"-->
+    		<!--android:layout_weight="1"/>-->
+        <!-- 下边的两行列表 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:orientation="vertical"
+            android:background="@drawable/round_rect_white"
+            android:layout_marginBottom="10dp">
+
+            <!-- 用户授权列表 -->
+            <RelativeLayout
+                android:id="@+id/layout_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp">
+                <TextView
+                    style="@style/heart_text"
+                    android:text="历史信息"/>
+                <TextView
+                    android:id="@+id/mine_history_more"
+                    style="@style/number_bracket"
+                    />
+            </RelativeLayout>
+    		<View 
+    		    style="@style/line_horizontal"/>
+    		 <!-- 用户授权列表 -->
+            <RelativeLayout
+                android:id="@+id/layout_auth"
+                android:layout_width="match_parent"
+    			android:layout_height="wrap_content"
+                android:padding="8dp">
+                <TextView 
+                    style="@style/heart_text"
+                    android:text="@string/mine_text_user"/>
+                <TextView
+                    android:id="@+id/mine_auth_more"
+                style="@style/number_bracket"
+                />
+            </RelativeLayout>
+            <View 
+    		    style="@style/line_horizontal"/>
+            <!-- 设置列表 -->
+             <RelativeLayout
+                 android:id="@+id/layout_setting"
+                android:layout_width="match_parent"
+    			android:layout_height="wrap_content"
+                 android:padding="8dp">
+                <TextView 
+                    style="@style/heart_text"
+                    android:text="@string/mine_text_setting"/>
+                <TextView
+                    android:id="@+id/mine_setting_more"
+                style="@style/number_bracket"
+                />
+            </RelativeLayout>
+
+        </LinearLayout>
+</LinearLayout>

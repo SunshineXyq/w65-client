@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:text="用药提醒"
+            />
+        <Button
+            android:id="@+id/add_use_medicine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="新增"
+            android:textSize="20sp"
+            android:textColor="@color/blue"
+            android:background="#ffffff"
+            />
+
+        <ImageView
+            android:id="@+id/imageview_title_back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:padding="5dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/_infoback"/>
+
+
+    </RelativeLayout>
+
+    <View style="@style/line_horizontal" />
+
+   <ListView
+       android:id="@+id/lv_use_medicine"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_marginTop="10dp">
+   </ListView>
+
+</LinearLayout>

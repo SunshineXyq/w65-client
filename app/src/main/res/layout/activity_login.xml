@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 欢迎的头像和文本 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/login_logo" >
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/login_text_welcome"
+            android:textColor="#00ff00" />
+    </LinearLayout>
+    <!-- 登录的账号和密码 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:background="#fff"
+        android:padding="5dp" >
+
+        <!-- 登录的手机号 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/login_info"
+                android:textSize="18sp"
+                android:textColor="#000"
+                android:text="@string/login_text_phone" />
+
+            <EditText
+                android:id="@+id/edittext_username"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textColor="#0004FF"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:maxLength="11"
+                android:textSize="18sp"
+                android:singleLine="true"
+                android:background="@null" />
+        </LinearLayout>
+
+        <View style="@style/line_horizontal" />
+        <!-- 登录的密码 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/login_info"
+                android:textSize="18sp"
+                android:textColor="#000"
+                android:text="@string/login_text_password" />
+
+            <EditText
+                android:id="@+id/edittext_password"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp"
+                android:singleLine="true"
+                android:inputType="textPassword"
+                android:textSize="18sp"
+                android:text="123456"
+                android:background="@null" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 登录按钮 -->
+
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/login_shape_button"
+        android:gravity="center"
+        android:text="@string/login_text_login"
+        android:textSize="18sp"
+        android:textColor="@color/darkblue" />
+
+    <!--<Button-->
+        <!--android:id="@+id/button_login"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="8dp"-->
+        <!--android:layout_marginRight="8dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:text="@string/login_text_login" />-->
+    
+    <!-- 登录遇到问题的解决选项 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <!-- 客服 -->
+
+        <TextView
+            android:id="@+id/login_service"
+            style="@style/login_trouble"
+            android:textSize="15sp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="40dp"
+            android:text="@string/login_text_service" />
+        <!-- 临时密码 -->
+
+        <TextView
+            android:id="@+id/login_temppass"
+            style="@style/login_trouble"
+            android:textSize="15sp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/login_text_temppassword" />
+        <!-- 忘记密码 -->
+
+        <TextView
+            android:id="@+id/login_forgetpass"
+            style="@style/login_trouble"
+            android:textSize="15sp"
+            android:layout_toRightOf="@+id/login_temppass"
+            android:layout_marginLeft="40dp"
+            android:text="@string/login_text_forgetpassword" />
+    </RelativeLayout>
+
+</LinearLayout>
