@@ -141,6 +141,7 @@ public class StartAnimation extends BaseActivity implements LocationListener {
         tm = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
         name = android.os.Build.MANUFACTURER;          //name
         Log.d(TAG, name);
+        Log.d(TAG, "开始界面");
         sver = android.os.Build.VERSION.RELEASE;    //sver
         Log.d(TAG, sver);
         model = Build.MODEL;                //device model 型号
@@ -189,41 +190,6 @@ public class StartAnimation extends BaseActivity implements LocationListener {
             startActivity(intent);
         }
     }
-
-//    private void initServer() {
-//        mSharedPreferences = getSharedPreferences("count", MODE_PRIVATE);
-//        String latitude = mSharedPreferences.getString("lat", "");
-//        String lnglatitude = mSharedPreferences.getString("lat", "");
-//        Log.d("取出存入的经纬度", latitude + "#" + lnglatitude);
-//
-//        try {
-//            JSONObject jsonGeo = new JSONObject();
-//            jsonGeo.put("lat", latitude);
-//            jsonGeo.put("lng", lnglatitude);
-//            Log.d("json经纬度", jsonGeo.toString());
-//            JSONObject jsonObject = new JSONObject(jsonGeo.toString());
-//
-//            JSONObject jsonBody = new JSONObject();
-//            jsonBody.put("duid", duid);
-//            jsonBody.put("name", name);
-//            jsonBody.put("model", model);
-//            jsonBody.put("sver", sver);
-//            jsonBody.put("aver", aver);
-//            jsonBody.put("type", "2");
-//            jsonBody.put("tm", CurrentTime);
-//            jsonBody.put("geo", jsonObject);
-//
-//            JSONObject jsonReq = new JSONObject();
-//            jsonReq.put("msg", 10);
-//            jsonReq.put("body", jsonBody);
-//
-//            MyService.client.send(jsonReq.toString());
-//
-//        } catch (Exception e) {
-//
-//        }
-//
-//	}
 
     /**
      *

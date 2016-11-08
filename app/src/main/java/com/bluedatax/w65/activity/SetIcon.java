@@ -153,7 +153,7 @@ public class SetIcon extends BaseActivity implements View.OnClickListener {
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-                    upload();
+//                    upload();
                     mImageViewImage.setImageBitmap(bp);
                     break;
                 case PICTURE_FROM_GALLERY:
@@ -163,7 +163,7 @@ public class SetIcon extends BaseActivity implements View.OnClickListener {
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-                    upload();
+//                    upload();
                     mImageViewImage.setImageBitmap(bit);
                     break;
             }

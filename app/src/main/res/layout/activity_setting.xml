@@ -27,7 +27,7 @@
            android:id="@+id/imageview_setting_icon_more"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
-           android:src="@mipmap/title_back"
+           android:src="@mipmap/_jiantou"
            android:layout_centerVertical="true"
            android:layout_alignParentRight="true"/>
        <de.hdodenhof.circleimageview.CircleImageView
@@ -62,10 +62,9 @@
                 android:text="@string/setting_text_findloginpass"
                 android:textSize="18dp"/>
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/title_back"
-                android:layout_alignParentRight="true"/>
+                android:id="@+id/heart_gift_remind"
+                style="@style/heart_more"
+                />
             </RelativeLayout>
         <View style="@style/line_horizontal"/>
         <RelativeLayout
@@ -79,10 +78,8 @@
                 android:text="@string/setting_text_fixloginpass"
                 android:textSize="18dp"/>
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/title_back"
-                android:layout_alignParentRight="true"/>
+                style="@style/heart_more"
+                />
         </RelativeLayout>
 
         </LinearLayout>
@@ -103,10 +100,9 @@
                 android:text="@string/setting_text_grade"
                 android:textSize="18dp"/>
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/title_back"
-                android:layout_alignParentRight="true"/>
+
+                style="@style/heart_more"
+                />
         </RelativeLayout>
         <View style="@style/line_horizontal"/>
         <RelativeLayout
@@ -120,10 +116,9 @@
                 android:textSize="18dp"/>
             <ImageView
                 android:id="@+id/imageview_setting_about_more"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/title_back"
-                android:layout_alignParentRight="true"/>
+                style="@style/heart_more"
+                />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

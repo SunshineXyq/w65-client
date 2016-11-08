@@ -161,15 +161,15 @@ public class BirthdaySound extends BaseActivity implements View.OnTouchListener 
     private String auid;
     private uploadRecordTask task;
     private int devSign;
-    private String gdid_1;
-    private String gdid_2;
     private List<BirthdayRingRecord> ringAll;
     private List<BirthdayRingRecord> ringItem;
     private int pos;
     private Timer mTimer;
     private int deviceRing;
-    private String gdid_1_name;
-    private String gdid_2_name;
+    private String gdid_1 = "1-1001";
+    private String gdid_2 = "2-1001";
+    private String gdid_1_name = "李思奶奶";
+    private String gdid_2_name = "张三大爷";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -209,12 +209,12 @@ public class BirthdaySound extends BaseActivity implements View.OnTouchListener 
         lvBirthdayRing.setAdapter(birthdayRingAdapter);
         deleteRecord();
         ringPlayer = new MediaPlayer();
-        Map map_1 = (Map)FirstPager.list.get(0);
-        Map map_2 = (Map)FirstPager.list.get(1);
-        gdid_1 = (String)map_1.get("gdid");
-        gdid_2 = (String)map_2.get("gdid");
-        gdid_1_name = (String) map_1.get("name");
-        gdid_2_name = (String) map_2.get("name");
+//        Map map_1 = (Map)FirstPager.list.get(0);
+//        Map map_2 = (Map)FirstPager.list.get(1);
+//        gdid_1 = (String)map_1.get("gdid");
+//        gdid_2 = (String)map_2.get("gdid");
+//        gdid_1_name = (String) map_1.get("name");
+//        gdid_2_name = (String) map_2.get("name");
         System.out.println(gdid_1+"-------"+gdid_2);
 
         String pathOne = Environment.getExternalStorageDirectory() + "/w65/icon_download/" + "downloadImage1.jpg";

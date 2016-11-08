@@ -41,11 +41,11 @@ public class LongSideRemind extends BaseActivity implements View.OnClickListener
     private String current;
     private String pathThree;
     private String titleName;
-    private String gdid_1;
-    private String gdid_2;
-    private String gdid_1_name;
-    private String gdid_1_name1;
-    private String gdid_2_name;
+    private String gdid_1 = "1-1001";
+    private String gdid_2 = "2-1001";
+    private String gdid_1_name = "李思奶奶";
+    private String gdid_2_name = "张三大爷";
+    private TextView tv_remind;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,14 +60,16 @@ public class LongSideRemind extends BaseActivity implements View.OnClickListener
         birthdayRing = (RelativeLayout) findViewById(R.id.birthday_ring);
         birthdayRemindRing = (RelativeLayout) findViewById(R.id.birthday_remind_ring);
         medicineRemind = (RelativeLayout) findViewById(R.id.use_medicine_remind);
+        tv_remind = (TextView) findViewById(R.id.tv_remind);
         System.out.println("默认设备deviceSign" + deviceSign);
 
-        Map map_1 = (Map) FirstPager.list.get(0);
-        Map map_2 = (Map)FirstPager.list.get(1);
-        gdid_1 = (String)map_1.get("gdid");
-        gdid_2 = (String)map_2.get("gdid");
-        gdid_1_name = (String) map_1.get("name");
-        gdid_2_name = (String) map_2.get("name");
+//        Map map_1 = (Map) FirstPager.list.get(0);
+//        Map map_2 = (Map)FirstPager.list.get(1);
+//        gdid_1 = (String)map_1.get("gdid");
+//        gdid_2 = (String)map_2.get("gdid");
+//        gdid_1_name = (String) map_1.get("name");
+//        gdid_2_name = (String) map_2.get("name");
+
 
         birthdayImageOne = (ImageView) findViewById(R.id.birthday_image_one);
         birthdayImageTwo = (ImageView) findViewById(R.id.birthday_image_two);
@@ -95,6 +97,8 @@ public class LongSideRemind extends BaseActivity implements View.OnClickListener
             setBirthdayTime.setVisibility(View.VISIBLE);
         } else if (titleName.equals("用药提醒")) {
             medicineRemind.setVisibility(View.VISIBLE);
+        } else if (titleName.equals("久坐提醒")) {
+            tv_remind.setVisibility(View.GONE);
         }
 //        birthdayDate.setText(current);
 

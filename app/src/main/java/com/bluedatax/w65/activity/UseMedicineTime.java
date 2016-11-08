@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bluedatax.w65.BaseActivity;
@@ -29,6 +30,13 @@ public class UseMedicineTime extends BaseActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_use_medicine_time);
         remark = (EditText) findViewById(R.id.et_remark);
+        ImageView imageview_title_back = (ImageView) findViewById(R.id.imageview_title_back);
+        imageview_title_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         time = (EditText) findViewById(R.id.et_time);
         btIncreate = (Button) findViewById(R.id.confirm_increate);
         btIncreate.setOnClickListener(new View.OnClickListener() {

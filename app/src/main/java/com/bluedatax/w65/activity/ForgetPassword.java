@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -67,11 +68,16 @@ public class ForgetPassword extends BaseActivity implements View.OnClickListener
         switch (v.getId()) {
             case R.id.button_get_message:
                 verifyCode = mEditTextMessage.getText().toString().trim();
-                new SendHandler().sendHandler(FORGET_PHONE, handler);
-                dialog = new LoadingDialog(this);
-                dialog.setCanceledOnTouchOutside(false);
-                dialog.show();
-                deltetTime();
+                if (!TextUtils.isEmpty(verifyCode)) {
+                    new SendHandler().sendHandler(FORGET_PHONE, handler);
+                    dialog = new LoadingDialog(this);
+                    dialog.setCanceledOnTouchOutside(false);
+                    dialog.show();
+                    deltetTime();
+                } else {
+                    Toast.makeText(getApplicationContext(),"手机号码不能为空",Toast.LENGTH_SHORT).show();
+                }
+
                 break;
             case R.id.button_find_next:
                 new SendHandler().sendHandler(FORGET_CODE, handler);
@@ -106,7 +112,13 @@ public class ForgetPassword extends BaseActivity implements View.OnClickListener
                     }
                     break;
                 case FORGET_PHONE:
-                    getPhoneVerificationCode();            //获取手机验证码
+//                    getPhoneVerificationCode();            //获取手机验证码
+                    dialog.dismiss();
+                    mTextViewMessage.setVisibility(View.VISIBLE);
+                    mTextViewMessage.setText(String.format(getResources().
+                            getString(R.string.temppassword_text_info),verifyCode));
+                    mButtonNext.setVisibility(View.VISIBLE);
+                    mButtonNext.setClickable(true);
                     break;
                 case FORGET_CODE:
                     setLoginPassword();

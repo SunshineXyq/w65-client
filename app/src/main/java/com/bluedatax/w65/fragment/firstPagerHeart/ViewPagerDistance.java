@@ -46,6 +46,6 @@ public class ViewPagerDistance extends Fragment {
 //将三张图标加入到集合中
         mViews.add(view1);
         mViews.add(view2);
-        mViews.add(view3);
+//        mViews.add(view3);
     }
 }

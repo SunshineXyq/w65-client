@@ -47,6 +47,6 @@ public class ViewPagerHeart extends Fragment {
 
         mViews.add(view1);
         mViews.add(view2);
-        mViews.add(view3);
+//        mViews.add(view3);
     }
 }

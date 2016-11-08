@@ -69,27 +69,27 @@ public class Mine extends Fragment implements View.OnClickListener{
         deviceTwo2 = (ImageView) view.findViewById(R.id.device_message_detail).findViewById(R.id.devicetwo2);
         mLayoutHistory.setOnClickListener(this);
 
-        Map map = (Map)FirstPager.list.get(0);
-        final String gdid = (String)map.get("gdid");
-        final String name = (String)map.get("name");
-        final String srv_status = (String)map.get("srv_status");
-        final String upn = (String)map.get("upn");
-
-        Map mapLi = (Map)FirstPager.list.get(1);
-        final String gdidLi = (String)mapLi.get("gdid");
-        final String nameLi = (String)mapLi.get("name");
-        final String srv_statusLi = (String)mapLi.get("srv_status");
-        final String upnLi = (String)mapLi.get("upn");
+//        Map map = (Map)FirstPager.list.get(0);
+//        final String gdid = (String)map.get("gdid");
+//        final String name = (String)map.get("name");
+//        final String srv_status = (String)map.get("srv_status");
+//        final String upn = (String)map.get("upn");
+//
+//        Map mapLi = (Map)FirstPager.list.get(1);
+//        final String gdidLi = (String)mapLi.get("gdid");
+//        final String nameLi = (String)mapLi.get("name");
+//        final String srv_statusLi = (String)mapLi.get("srv_status");
+//        final String upnLi = (String)mapLi.get("upn");
 
 
         deviceTwo1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent in_one = new Intent(getActivity(), MineDeviceDetail.class);
-                in_one.putExtra("gdid",gdid);
-                in_one.putExtra("name",name);
-                in_one.putExtra("srv_status",srv_status);
-                in_one.putExtra("upn",upn);
+//                in_one.putExtra("gdid",gdid);
+//                in_one.putExtra("name",name);
+//                in_one.putExtra("srv_status",srv_status);
+//                in_one.putExtra("upn",upn);
                 startActivity(in_one);
             }
         });
@@ -97,10 +97,10 @@ public class Mine extends Fragment implements View.OnClickListener{
             @Override
             public void onClick(View v) {
                 Intent in_two = new Intent(getActivity(), MineDeviceDetail.class);
-                in_two.putExtra("gdid",gdidLi);
-                in_two.putExtra("name",nameLi);
-                in_two.putExtra("srv_status",srv_statusLi);
-                in_two.putExtra("upn",upnLi);
+//                in_two.putExtra("gdid",gdidLi);
+//                in_two.putExtra("name",nameLi);
+//                in_two.putExtra("srv_status",srv_statusLi);
+//                in_two.putExtra("upn",upnLi);
                 startActivity(in_two);
             }
         });

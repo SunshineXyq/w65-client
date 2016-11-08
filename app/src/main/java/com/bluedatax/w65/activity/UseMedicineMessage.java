@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -37,6 +38,13 @@ public class UseMedicineMessage extends Activity {
         setContentView(R.layout.activity_use_medicine_message);
         useMedicineMes = (ListView) findViewById(R.id.lv_use_medicine);
         addUseMedicine = (Button) findViewById(R.id.add_use_medicine);
+        ImageView imageview_title_back = (ImageView) findViewById(R.id.imageview_title_back);
+        imageview_title_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         mInflater = getLayoutInflater();
         listRemind = new ArrayList<UseMedicineData>();
         useMedicineAdapter = new UseMedicineAdapter(listRemind,mInflater);

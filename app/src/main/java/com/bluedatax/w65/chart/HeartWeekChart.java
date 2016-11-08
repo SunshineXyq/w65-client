@@ -47,6 +47,7 @@ public class HeartWeekChart extends View {
         mPaintText=new Paint();
         mPaintText.setColor(Color.BLUE);
         mPaintText.setStrokeWidth(4);
+        mPaintText.setTextSize(20f);
 
         mPaintDot=new Paint();
         mPaintDot.setColor(Color.RED);
@@ -83,7 +84,6 @@ public class HeartWeekChart extends View {
         }
         for (int i=0;i<7;i++){
                 canvas.drawCircle(30+(width-30)/8f*i,height-(((mHeartDatas1[i]-40)/5f)*((height-30)/16f)+30),5,mPaintDot);
-
                 canvas.drawCircle(30+(width-30)/8f*i,height-(((mHeartDatas2[i]-40)/5f)*((height-30)/16f)+30),5,mPaintAxle);
 
             if (i<6){

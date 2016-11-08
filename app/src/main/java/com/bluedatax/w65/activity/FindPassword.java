@@ -1,10 +1,14 @@
 package com.bluedatax.w65.activity;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.text.TextUtils;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -39,7 +43,9 @@ public class FindPassword extends BaseActivity implements View.OnClickListener {
             super.handleMessage(msg);
             switch (msg.what) {
                 case FORGET_PASS:
-                    commitModifyPsw();
+//                    commitModifyPsw();
+                    dialog.dismiss();
+                    mButtonFindpassCommit.setText("修改成功，点击登录");
                     break;
             }
         }
@@ -50,6 +56,8 @@ public class FindPassword extends BaseActivity implements View.OnClickListener {
     private String currentTime;
     private String etPassword;
     private String verifyCode;
+    private TextView mTextViewServiceNumber;
+    private Dialog dialog1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +74,39 @@ public class FindPassword extends BaseActivity implements View.OnClickListener {
         title.setText("设置登录密码");
         mButtonFindpassCommit = (Button) findViewById(R.id.button_findpass_commit);
         mButtonFindpassCommit.setOnClickListener(this);
+        TextView tv_phone = (TextView) findViewById(R.id.tv_phone);
+        tv_phone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ShowServiceDialog();
+            }
+        });
+    }
+
+    private void ShowServiceDialog() {
+        dialog1 = new Dialog(FindPassword.this, R.style.callserviceDialogTheme);
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogSelf = inflater.inflate(R.layout.activity_callservice, null);
+        Button button_ok = (Button) dialogSelf.findViewById(R.id.callservice_button_yes);
+        Button button_cancel = (Button) dialogSelf.findViewById(R.id.callservice_button_cancel);
+        mTextViewServiceNumber = (TextView) dialogSelf.findViewById(R.id.text_setvice_number);
+        dialog1.setContentView(dialogSelf);
+        dialog1.show();
+        button_ok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(Intent.ACTION_CALL);
+                intent1.setData(Uri.parse("tel:" + mTextViewServiceNumber.getText()));
+                startActivity(intent1);
+                dialog1.dismiss();
+            }
+        });
+        button_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog1.dismiss();
+            }
+        });
     }
 
     @Override
@@ -73,13 +114,18 @@ public class FindPassword extends BaseActivity implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.button_findpass_commit:
                 etPassword = etModifyPsw.getText().toString().trim();
-                mLayoutEditpassword.setVisibility(View.GONE);
-                if ("提交".equals(mButtonFindpassCommit.getText())) {
-                    new SendHandler().sendHandler(FORGET_PASS, handler);
-                    dialog = new LoadingDialog(this);
-                    dialog.setCanceledOnTouchOutside(false);
-                    dialog.show();
-                } else if ("修改成功，点击登录".equals(mButtonFindpassCommit.getText())) {
+                if (!TextUtils.isEmpty(etPassword)) {
+                    if ("提交".equals(mButtonFindpassCommit.getText())) {
+                        mLayoutEditpassword.setVisibility(View.GONE);
+                        new SendHandler().sendHandler(FORGET_PASS, handler);
+                        dialog = new LoadingDialog(this);
+                        dialog.setCanceledOnTouchOutside(false);
+                        dialog.show();
+                    }
+                } else {
+                    Toast.makeText(getApplicationContext(),"密码不能为空",Toast.LENGTH_SHORT).show();
+                }
+                if ("修改成功，点击登录".equals(mButtonFindpassCommit.getText())) {
                     Intent intent = new Intent(FindPassword.this, Login.class);
                     startActivity(intent);
                 }

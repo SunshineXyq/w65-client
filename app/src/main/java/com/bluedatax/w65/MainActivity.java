@@ -179,7 +179,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
             //首页中的图标变亮
             case 0:
                 Drawable homePagePress = getResources().getDrawable(R.mipmap.home_page_press);
-                homePagePress.setBounds(0,0,50,50);
+                homePagePress.setBounds(0,0,70,70);
                 mRadioButtonFirst.setCompoundDrawables(null,homePagePress,null,null);
                 if (mFirstPager == null ) {
                     mFirstPager = new FirstPager();
@@ -192,7 +192,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
                 break;
             case 1:
                 Drawable lovePress = getResources().getDrawable(R.mipmap.love_press);
-                lovePress.setBounds(0,0,50,50);
+                lovePress.setBounds(0,0,70,70);
                 mRadioButtonLove.setCompoundDrawables(null,lovePress,null,null);
                 if (mHeart == null) {
                     mHeart = new Heart();
@@ -203,7 +203,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
                 break;
             case 2:
                 Drawable familyPress = getResources().getDrawable(R.mipmap.family_press);
-                familyPress.setBounds(0,0,50,50);
+                familyPress.setBounds(0,0,70,70);
                 mRadioButtonFamily.setCompoundDrawables(null,familyPress,null,null);
                 if (mFamily == null) {
                     mFamily = new Family();
@@ -214,7 +214,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
                 break;
             case 3:
                 Drawable minePress = getResources().getDrawable(R.mipmap.mine_press);
-                minePress.setBounds(0,0,50,50);
+                minePress.setBounds(0,0,70,70);
                 mRadioButtonMine.setCompoundDrawables(null,minePress,null,null);
                 if (mMine == null) {
                     mMine = new Mine();
@@ -232,10 +232,10 @@ public class MainActivity extends BaseActivity implements OnClickListener {
         Drawable love = getResources().getDrawable(R.mipmap.love_gray);
         Drawable family = getResources().getDrawable(R.mipmap.family_gray);
         Drawable mine = getResources().getDrawable(R.mipmap.mine_gray);
-        homePage.setBounds(0,0,50,50);
-        love.setBounds(0,0,50,50);
-        family.setBounds(0, 0, 50, 50);
-        mine.setBounds(0, 0, 50, 50);
+        homePage.setBounds(0,0,70,70);
+        love.setBounds(0,0,70,70);
+        family.setBounds(0, 0, 70, 70);
+        mine.setBounds(0, 0, 70, 70);
         mRadioButtonFirst.setCompoundDrawables(null,homePage,null,null);
         mRadioButtonLove.setCompoundDrawables(null,love,null,null);
         mRadioButtonFamily.setCompoundDrawables(null,family,null,null);
@@ -283,7 +283,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
                 }
             }, 2000);
         } else {
-            sendExit();
+//            sendExit();
             Intent in = new Intent(this, MyService.class);
             stopService(in);
             ActivityControler.finishAll();

@@ -48,6 +48,7 @@ public class HeartDayLineChart extends View {
 
         mPaintText=new Paint();
         mPaintText.setColor(Color.BLUE);
+        mPaintText.setTextSize(20f);
         mPaintText.setStrokeWidth(4);
 
         mPaintDot=new Paint();
@@ -57,9 +58,11 @@ public class HeartDayLineChart extends View {
                 Calculate.caculateHour(12),Calculate.caculateHour(8),Calculate.caculateHour(4),
                 Calculate.caculateHour(0)};
         heartNums=new String[]{"40","45","50","55","60","65","70","75","80","85","90","95","100","105","110","115","120"};
-        mHeartDatas1=new int[]{FirstPager.average7,FirstPager.average1,FirstPager.average2,FirstPager.average3,
-                FirstPager.average4, FirstPager.average5, FirstPager.average6};
-//        mHeartDatas2=new int[]{80,90,85,70,72,63,75};
+//        mHeartDatas1=new int[]{FirstPager.average7,FirstPager.average1,FirstPager.average2,FirstPager.average3,
+//                FirstPager.average4, FirstPager.average5, FirstPager.average6};
+        mHeartDatas2=new int[]{80,90,85,70,72,63,75};
+        mHeartDatas1=new int[]{90,70,65,80,62,73,80};
+
     }
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
@@ -83,20 +86,22 @@ public class HeartDayLineChart extends View {
             canvas.drawText(heartNums[i],15,height-30-i*((height-30)/16),mPaintText);
         }
         for (int i=0;i<7;i++){
-//                canvas.drawCircle(30+(width-30)/8f*i,height-(((mHeartDatas1[i]-40)/5f)*((height-30)/16f)+30),5,mPaintDot);
 
-                canvas.drawCircle(30+(width-30)/8f*i,height-((mHeartDatas1[i]/180f)*(height-30)+30),5,mPaintDot);
+            canvas.drawCircle(30+(width-30)/8f*i,height-(((mHeartDatas2[i]-40)/5f)*((height-30)/16f)+30),5,mPaintText);
+            canvas.drawCircle(30+(width-30)/8f*i,height-(((mHeartDatas1[i]-40)/5f)*((height-30)/16f)+30),5,mPaintDot);
+
+//                canvas.drawCircle(30+(width-30)/8f*i,height-((mHeartDatas1[i]/180f)*(height-30)+30),5,mPaintDot);
 
 //                canvas.drawCircle(30+(width-30)/8f*i,height-(((mHeartDatas2[i]-40)/5f)*((height-30)/16f)+30),5,mPaintAxle);
 
             if (i<6){
-//                canvas.drawLine(30+(width-30)/8f*i,height-(((mHeartDatas1[i]-40)/5f)*((height-30)/16f)+30),30+(width-30f)/8*(i+1),
-//                        height-(((mHeartDatas1[i+1]-40f)/5)*((height-30)/16f)+30),mPaintText);
+                canvas.drawLine(30+(width-30)/8f*i,height-(((mHeartDatas1[i]-40)/5f)*((height-30)/16f)+30),30+(width-30f)/8*(i+1),
+                        height-(((mHeartDatas1[i+1]-40f)/5)*((height-30)/16f)+30),mPaintText);
 
-                canvas.drawLine(30+(width-30)/8f*i,height-((mHeartDatas1[i]/180f)*(height-30)+30),30+(width-30f)/8*(i+1),
-                        height-((mHeartDatas1[i+1]/180f)*(height-30)+30),mPaintText);
-//                canvas.drawLine(30+(width-30)/8f*i,height-(((mHeartDatas2[i]-40)/5f)*((height-30)/16f)+30),30+(width-30f)/8*(i+1),
-//                        height-(((mHeartDatas2[i+1]-40f)/5)*((height-30)/16f)+30),mPaintText);
+//                canvas.drawLine(30+(width-30)/8f*i,height-((mHeartDatas2[i]/180f)*(height-30)+30),30+(width-30f)/8*(i+1),
+//                        height-((mHeartDatas2[i+1]/180f)*(height-30)+30),mPaintText);
+                canvas.drawLine(30+(width-30)/8f*i,height-(((mHeartDatas2[i]-40)/5f)*((height-30)/16f)+30),30+(width-30f)/8*(i+1),
+                        height-(((mHeartDatas2[i+1]-40f)/5)*((height-30)/16f)+30),mPaintText);
             }
         }
     }

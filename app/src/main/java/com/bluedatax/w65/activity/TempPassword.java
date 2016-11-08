@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -87,7 +88,13 @@ public class TempPassword extends BaseActivity implements OnClickListener {
                     }
                     break;
                 case SEND_PHONE:
-                    getVerificationCode();
+//                    getVerificationCode();
+                    mButtonNext.setBackgroundResource(R.drawable.button_commit);
+                    mButtonNext.setTextColor(Color.RED);
+                    mTextViewHelpInfo.setVisibility(View.VISIBLE);
+                    mTextViewHelpInfo.setText(String.format(getResources().getString
+                            (R.string.temppassword_text_info),verifyNumber));
+                    mButtonNext.setClickable(true);
                     break;
                 case SEND_CODE:
                     responseOfCode();
@@ -158,21 +165,25 @@ public class TempPassword extends BaseActivity implements OnClickListener {
 
     @Override
     public void onClick(View v) {
-        // TODO Auto-generated method stub
+
         switch (v.getId()) {
             case R.id.button_send_number:
                 verifyNumber = mEditTextVerify.getText().toString().trim();
-                if (mButtonSend.getText().equals("点击发送")) {
-                    deltetTime();
-                    new SendHandler().sendHandler(SEND_PHONE, handler);
-                    mImageDotLogin.setImageResource(R.mipmap.temppass_dot_checked);
-                    mTextViewLogin.setTextColor(Color.RED);
-                    mImageDotVerify.setImageResource(R.mipmap.temppass_dot_normal);
-                    mTextViewVerify.setTextColor(Color.GRAY);
-                } else if (mButtonSend.getText().equals("重新发送")) {
-                    i = 120;
-                    deltetTime();
-                    new SendHandler().sendHandler(SEND_PHONE, handler);
+                if (!TextUtils.isEmpty(verifyNumber)) {
+                    if (mButtonSend.getText().equals("点击发送")) {
+                        deltetTime();
+                        new SendHandler().sendHandler(SEND_PHONE, handler);
+                        mImageDotLogin.setImageResource(R.mipmap.temppass_dot_checked);
+                        mTextViewLogin.setTextColor(Color.RED);
+                        mImageDotVerify.setImageResource(R.mipmap.temppass_dot_normal);
+                        mTextViewVerify.setTextColor(Color.GRAY);
+                    } else if (mButtonSend.getText().equals("重新发送")) {
+                        i = 120;
+                        deltetTime();
+                        new SendHandler().sendHandler(SEND_PHONE, handler);
+                    }
+                } else {
+                    Toast.makeText(getApplicationContext(),"手机号不能为空",Toast.LENGTH_SHORT).show();
                 }
                 break;
 

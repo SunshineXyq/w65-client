@@ -47,6 +47,7 @@ public class DistanceWeekChart extends View {
         mPaintText=new Paint();
         mPaintText.setColor(Color.BLUE);
         mPaintText.setStrokeWidth(4);
+        mPaintText.setTextSize(20f);
 
         mPaintDot=new Paint();
         mPaintDot.setColor(Color.RED);

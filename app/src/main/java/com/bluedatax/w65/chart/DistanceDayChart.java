@@ -49,6 +49,7 @@ public class DistanceDayChart extends View {
         mPaintText=new Paint();
         mPaintText.setColor(Color.BLUE);
         mPaintText.setStrokeWidth(4);
+        mPaintText.setTextSize(20f);
 
         mPaintDot=new Paint();
         mPaintDot.setColor(Color.RED);
@@ -56,12 +57,13 @@ public class DistanceDayChart extends View {
         mDates= new String[]{Calculate.caculateHour(28),Calculate.caculateHour(24),Calculate.caculateHour(20),Calculate.caculateHour(16),
                 Calculate.caculateHour(12),Calculate.caculateHour(8),Calculate.caculateHour(4),
                 Calculate.caculateHour(0)};
-        heartNums=new String[]{"40","45","50","55","60","65","70","75","80","85","90","95","100","105","110","115","120"};
-        mHeartDatas1=new int[]{FirstPager.averageStep7,FirstPager.averageStep1,
-                FirstPager.averageStep2,FirstPager.averageStep3,
-                FirstPager.averageStep4,FirstPager.averageStep5,FirstPager.averageStep6};
+        heartNums=new String[]{"50","100","150","200","250","300","350","400","450","500","550","600","650","700","750","800"};
+//        mHeartDatas1=new int[]{FirstPager.averageStep7,FirstPager.averageStep1,
+//                FirstPager.averageStep2,FirstPager.averageStep3,
+//                FirstPager.averageStep4,FirstPager.averageStep5,FirstPager.averageStep6};
 //        System.out.println(FirstPager.averageStep7+"--"+FirstPager.averageStep1);
-        mHeartDatas2=new int[]{80,90,85,70,72,63,75};
+        mHeartDatas2=new int[]{200,300,400,375,460,550,475};
+        mHeartDatas1=new int[]{500,550,735,600,650,600,625};
     }
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
@@ -85,17 +87,19 @@ public class DistanceDayChart extends View {
             canvas.drawText(heartNums[i],15,height-30-i*((height-30)/16),mPaintText);
         }
         for (int i=0;i<7;i++){
-//            canvas.drawCircle(30+(width-30)/8f*i,height-(((mHeartDatas1[i]-40)/5f)*((height-30)/16f)+30),5,mPaintDot);
-            canvas.drawCircle(30+(width-30)/8f*i,height-((mHeartDatas1[i]/2100f)*(height-30)+30),5,mPaintDot);
-//            canvas.drawCircle(30+(width-30)/8f*i,height-(((mHeartDatas2[i]-40)/5f)*((height-30)/16f)+30),5,mPaintAxle);
+            canvas.drawCircle(30+(width-30)/8f*i,height-(((mHeartDatas1[i]-50)/50f)*((height-30)/16f)+30),5,mPaintDot);
+//            canvas.drawCircle(30+(width-30)/8f*i,height-((mHeartDatas2[i]/2100f)*(height-30)+30),5,mPaintDot);
+            canvas.drawCircle(30+(width-30)/8f*i,height-(((mHeartDatas2[i]-50)/50f)*((height-30)/16f)+30),5,mPaintAxle);
 
             if (i<6){
-                canvas.drawLine(30+(width-30)/8f*i,height-((mHeartDatas1[i]/2100f)*(height-30)+30),30+(width-30f)/8*(i+1),
-                        height-((mHeartDatas1[i+1]/2100f)*(height-30)+30),mPaintText);
+//                canvas.drawLine(30+(width-30)/8f*i,height-((mHeartDatas2[i]/2100f)*(height-30)+30),30+(width-30f)/8*(i+1),
+//                        height-((mHeartDatas2[i+1]/2100f)*(height-30)+30),mPaintText);
 //                canvas.drawLine(30+(width-30)/8f*i,height-((mHeartDatas1[i]/(height-30))*(height-30)+30),30+(width-30f)/8*(i+1),
 //                        height-((mHeartDatas1[i+1]/(height-30))*(height-30)+30),mPaintText);
-//                canvas.drawLine(30+(width-30)/8f*i,height-(((mHeartDatas2[i]-40)/5f)*((height-30)/16f)+30),30+(width-30f)/8*(i+1),
-//                        height-(((mHeartDatas2[i+1]-40f)/5)*((height-30)/16f)+30),mPaintText);
+                canvas.drawLine(30+(width-30)/8f*i,height-(((mHeartDatas1[i]-50)/50f)*((height-30)/16f)+30),30+(width-30f)/8*(i+1),
+                        height-(((mHeartDatas1[i+1]-50f)/50)*((height-30)/16f)+30),mPaintText);
+                canvas.drawLine(30+(width-30)/8f*i,height-(((mHeartDatas2[i]-50)/50f)*((height-30)/16f)+30),30+(width-30f)/8*(i+1),
+                        height-(((mHeartDatas2[i+1]-50f)/50)*((height-30)/16f)+30),mPaintText);
             }
         }
     }

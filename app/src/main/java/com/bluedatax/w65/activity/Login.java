@@ -220,14 +220,14 @@ public class Login extends BaseActivity implements OnClickListener {
 
         currentTime = getTime.getCurrentTime();
         tm = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
-        name = android.os.Build.MANUFACTURER;          //name
+        name = android.os.Build.MANUFACTURER;       //name
         Log.d("loginActivity", name);
         sver = android.os.Build.VERSION.RELEASE;    //sver
         Log.d("loginActivity", sver);
-        model = Build.MODEL;                //device model 型号
+        model = Build.MODEL;                        //device model 型号
         Log.d("loginActivity", model);
         GetAppVersion mGetAppVersion = new GetAppVersion(mContext);
-        aver = mGetAppVersion.getVersion();      //aver
+        aver = mGetAppVersion.getVersion();         //aver
         Log.d("loginActivity", aver);
         DEVICE_ID = tm.getDeviceId();
         Log.d("loginActivity", DEVICE_ID);
@@ -281,11 +281,13 @@ public class Login extends BaseActivity implements OnClickListener {
                 Matcher m = p.matcher(mEditTextUsername.getText().toString().trim());     //匹配程序
                 if (m.matches()) {
                     saveUserPhone();
-                    if (error != null) {
-                        Toast.makeText(this, "网络连接错误", Toast.LENGTH_SHORT).show();
-                    } else {
-                        initLogin();
-                    }
+                    intent = new Intent(Login.this, MainActivity.class);
+                    startActivity(intent);
+//                    if (error != null) {
+//                        Toast.makeText(this, "网络连接错误", Toast.LENGTH_SHORT).show();
+//                    } else {
+//                        initLogin();
+//                    }
                 } else {
                     Toast.makeText(Login.this, "请输入正确格式的手机号",
                             Toast.LENGTH_LONG).show();
@@ -495,8 +497,8 @@ public class Login extends BaseActivity implements OnClickListener {
 //                } else {
 //                    Toast.makeText(Login.this,"网络不给力，请检查网络设置",Toast.LENGTH_LONG).show();
 //                }
-                intent = new Intent(Login.this, MainActivity.class);
-                startActivity(intent);
+                checkLogin();
+
                 break;
             default:
                 break;
@@ -544,10 +546,10 @@ public class Login extends BaseActivity implements OnClickListener {
         if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
             //需要处理
             ActivityControler.finishAll();
-            MyService.client.disconnect();
-            if (error == null && loginSign != null) {
-                sendExit();
-            }
+//            MyService.client.disconnect();
+//            if (error == null && loginSign != null) {
+//                sendExit();
+//            }
         }
         return false;
     }

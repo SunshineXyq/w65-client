@@ -25,7 +25,6 @@
             style="@style/radiobutton_main"
             android:button="@null"
             android:drawablePadding="3dp"
-            android:drawableTop="@drawable/firstpager"
             android:padding="3dp"
             android:text="@string/radiobutton_main_first"
             android:textColor="@drawable/color_radiobutton"
@@ -36,7 +35,6 @@
             style="@style/radiobutton_main"
             android:drawablePadding="3dp"
             android:padding="3dp"
-            android:drawableTop="@drawable/love"
             android:text="@string/radiobutton_main_love"
             android:textColor="@drawable/color_radiobutton"
             android:textSize="14sp" />
@@ -46,7 +44,6 @@
             style="@style/radiobutton_main"
             android:drawablePadding="3dp"
             android:padding="3dp"
-            android:drawableTop="@drawable/family"
             android:text="@string/radiobutton_main_family"
             android:textColor="@drawable/color_radiobutton"
             android:textSize="14sp" />
@@ -56,7 +53,6 @@
             style="@style/radiobutton_main"
             android:drawablePadding="3dp"
             android:padding="3dp"
-            android:drawableTop="@drawable/mine"
             android:text="@string/radiobutton_main_mine"
             android:textColor="@drawable/color_radiobutton"
             android:textSize="14sp" />

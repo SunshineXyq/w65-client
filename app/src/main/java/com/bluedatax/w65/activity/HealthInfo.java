@@ -67,7 +67,7 @@ public class HealthInfo extends BaseActivity implements XListView.IXListViewList
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getApplicationContext(),"可以弹出一个对话框用来显示具体信息情况",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"获取详情异常",Toast.LENGTH_LONG).show();
             }
         });
         new SendHandler().sendHandler(GET_HEALTH_INFO,handler);
@@ -128,11 +128,11 @@ public class HealthInfo extends BaseActivity implements XListView.IXListViewList
 
     private void initData() {
         mDatas=new ArrayList<HealthInfoData>();
-        mDatas.add(new HealthInfoData("2013", R.mipmap.ic_launcher,R.mipmap.people,"安全","",R.mipmap.ic_launcher,3));
-        mDatas.add(new HealthInfoData("2013",R.mipmap.ic_launcher,R.mipmap.people,"摔倒","已经处理",R.mipmap.ic_launcher,10));
-        mDatas.add(new HealthInfoData("2014",R.mipmap.ic_launcher,R.mipmap.people,"摔倒","已经处理",R.mipmap.ic_launcher,20));
-        mDatas.add(new HealthInfoData("2015",R.mipmap.ic_launcher,R.mipmap.people,"摔倒","已经处理",R.mipmap.ic_launcher,7));
-        mDatas.add(new HealthInfoData("2015",R.mipmap.ic_launcher,R.mipmap.people,"摔倒","已经处理",R.mipmap.ic_launcher,15));
+        mDatas.add(new HealthInfoData("2016", R.mipmap.ic_launcher,R.mipmap.people,"安全","",R.mipmap.ic_launcher,3));
+        mDatas.add(new HealthInfoData("2016",R.mipmap.ic_launcher,R.mipmap.people,"摔倒","已经处理",R.mipmap.ic_launcher,10));
+        mDatas.add(new HealthInfoData("2016",R.mipmap.ic_launcher,R.mipmap.people,"摔倒","已经处理",R.mipmap.ic_launcher,20));
+        mDatas.add(new HealthInfoData("2016",R.mipmap.ic_launcher,R.mipmap.people,"摔倒","已经处理",R.mipmap.ic_launcher,7));
+        mDatas.add(new HealthInfoData("2016",R.mipmap.ic_launcher,R.mipmap.people,"摔倒","已经处理",R.mipmap.ic_launcher,15));
     }
 
     @Override
@@ -160,6 +160,7 @@ public class HealthInfo extends BaseActivity implements XListView.IXListViewList
 
             @Override
             public void onFailConnection(String response, int statusCode) {
+                mListView.setAdapter(mAdapter);
                 Toast.makeText(getApplicationContext(),"网络连接失败",Toast.LENGTH_LONG).show();
                 mDialog.dismiss();
             }

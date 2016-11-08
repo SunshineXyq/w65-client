@@ -32,6 +32,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -223,6 +225,8 @@ public class FirstPager extends Fragment implements View.OnClickListener,SwipeRe
         latitude = mSharedPreference.getString("lat", "");
         lnglatitude = mSharedPreference.getString("lng", "");
         Log.d("取出存入的经纬度", latitude + "#" + lnglatitude);
+//        Animation ra = AnimationUtils.loadAnimation(getActivity(), R.anim.accident_rotate);
+//        mImageNotification.setAnimation(ra);
         mNotificationManger = (NotificationManager) getActivity().getSystemService(Context.NOTIFICATION_SERVICE);
         return view;
     }
@@ -480,7 +484,7 @@ public class FirstPager extends Fragment implements View.OnClickListener,SwipeRe
     @Override
     public void onResume() {
 //        homeQuery("stat");
-        homeQuery("device");
+//        homeQuery("device");
 //        homeQueryWeekStat(dt_s,dt_e);
         downloadImg = new ArrayList();
         taskMine = new downloadImageMineTask();
@@ -488,13 +492,13 @@ public class FirstPager extends Fragment implements View.OnClickListener,SwipeRe
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(ACTION_NAME);
         getActivity().registerReceiver(firstPagerReceiver, intentFilter);
-//        mViewPagerHeart=new ViewPagerHeart();
-//        mViewPagerDistance=new ViewPagerDistance();
-//        mManger=getChildFragmentManager();
-//        mTransaction=mManger.beginTransaction();
-//        mTransaction.replace(R.id.framelayout_chart,mViewPagerHeart);
-//        mRadioGroup.check(R.id.button_heart_chart);
-//        mTransaction.commit();
+        mViewPagerHeart=new ViewPagerHeart();
+        mViewPagerDistance=new ViewPagerDistance();
+        mManger=getChildFragmentManager();
+        mTransaction=mManger.beginTransaction();
+        mTransaction.replace(R.id.framelayout_chart,mViewPagerHeart);
+        mRadioGroup.check(R.id.button_heart_chart);
+        mTransaction.commit();
 //        new Thread(new Runnable() {
 //            @Override
 //            public void run() {
@@ -533,10 +537,11 @@ public class FirstPager extends Fragment implements View.OnClickListener,SwipeRe
     private void showDeviceCount() {
         String pathOne = Environment.getExternalStorageDirectory() + "/w65/icon_download/" + "downloadImage1.jpg";
         String pathTwo = Environment.getExternalStorageDirectory() + "/w65/icon_download/" + "downloadImage2.jpg";
-        String pathThree = Environment.getExternalStorageDirectory() + "/w65/icon_download/" + "downloadImage3.jpg";
+        String pathMine = Environment.getExternalStorageDirectory() + "/w65/icon_download/" + "mine.jpg";
         String pathFour = Environment.getExternalStorageDirectory() + "/w65/icon_download/" + "downloadImage4.jpg";
         String pathFive = Environment.getExternalStorageDirectory() + "/w65/icon_download/" + "downloadImage5.jpg";
         String pathSix = Environment.getExternalStorageDirectory() + "/w65/icon_download/" + "downloadImage6.jpg";
+        deviceMine.setImageBitmap(getLocalImage(pathMine));
         if (pathOne.length() != 0) {
             deviceThree.setVisibility(View.VISIBLE);
             deviceThree.setImageBitmap(getLocalImage(pathOne));
@@ -708,8 +713,8 @@ public class FirstPager extends Fragment implements View.OnClickListener,SwipeRe
                 break;
             case R.id.image_notification:
                 //发送通知
-                deviceEventQuery();
-//                StartNotification();
+//                deviceEventQuery();
+                StartNotification();
                 break;
             case R.id.device3:
                 Intent intent = new Intent(getActivity(),HealthInfo.class);
